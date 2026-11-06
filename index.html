@@ -1,0 +1,170 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Moralab | Clemente Althaus</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="navbar">
+    <a href="#inicio" class="logo">◈ Moralab</a>
+    <nav>
+      <a href="#inicio">Inicio</a>
+      <a href="#casos">Dilemas</a>
+      <a href="#biblioteca">Biblioteca</a>
+      <a href="#foro">Foro</a>
+    </nav>
+    <button id="accountBtn" class="btn">Ingresar</button>
+  </header>
+
+  <main>
+    <section id="inicio" class="hero">
+      <span class="eyebrow">
+        COLEGIO CLEMENTE ALTHAUS
+      </span>
+      <h1>Las decisiones importan.<br>
+        <em>Tu voz también.</em>
+      </h1>
+      <p>
+        Explora dilemas ficticios, reflexiona sobre tus
+        valores y descubre diferentes perspectivas.
+        Un espacio para aprender a tomar decisiones.
+      </p>
+      <a href="#casos" class="btn">Explorar dilemas →</a>
+      <div class="features">
+        <span>⚖️ Reflexiona</span>
+        <span>🗳️ Vota</span>
+        <span>📊 Analiza</span>
+        <span>💬 Debate</span>
+      </div>
+    </section>
+
+    <section id="como" class="section">
+      <span class="eyebrow">CONOCE MORALAB</span>
+      <h2>¿Qué es un dilema moral?</h2>
+      <p class="intro">
+        Es una situación en la que debemos elegir entre
+        opciones que ponen en conflicto valores como la
+        honestidad, la justicia o la solidaridad.
+        No siempre existe una única respuesta correcta.
+      </p>
+
+      <div class="grid">
+        <article class="card">
+          <b>01 · Lee</b>
+          <h3>Conoce el caso</h3>
+          <p>Analiza una situación ficticia y sus consecuencias.</p>
+        </article>
+        <article class="card">
+          <b>02 · Decide</b>
+          <h3>Vota en privado</h3>
+          <p>Elige la opción que consideres más responsable.</p>
+        </article>
+        <article class="card">
+          <b>03 · Comprende</b>
+          <h3>Compara ideas</h3>
+          <p>Observa resultados y reflexiona sobre otras perspectivas.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="casos" class="section">
+      <span class="eyebrow">LABORATORIO DE DECISIONES</span>
+      <h2>Dilemas para pensar</h2>
+      <p class="intro">
+        Lee cada situación y elige tu respuesta.
+        Los resultados son individuales en esta demostración.
+      </p>
+      <div id="caseList" class="grid"></div>
+    </section>
+
+    <section id="biblioteca" class="section">
+      <span class="eyebrow">APRENDE Y EXPLORA</span>
+      <h2>Biblioteca moral</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>⚖️ Justicia</h3>
+          <p>Tratar a las personas con equidad y reconocer sus derechos.</p>
+        </article>
+        <article class="card">
+          <h3>🤝 Empatía</h3>
+          <p>Comprender los sentimientos y experiencias de los demás.</p>
+        </article>
+        <article class="card">
+          <h3>💡 Honestidad</h3>
+          <p>Actuar con sinceridad y responsabilidad.</p>
+        </article>
+        <article class="card">
+          <h3>🕊️ Derechos humanos</h3>
+          <p>Principios de dignidad, libertad e igualdad.</p>
+        </article>
+        <article class="card">
+          <h3>📖 Principios morales</h3>
+          <p>Ideas que orientan nuestras decisiones y acciones.</p>
+        </article>
+        <article class="card">
+          <h3>🌱 Solidaridad</h3>
+          <p>Apoyar a los demás y contribuir al bienestar común.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="foro" class="section">
+      <span class="eyebrow">COMUNIDAD</span>
+      <h2>Foro de reflexión</h2>
+      <p class="intro">
+        Comparte tus argumentos con respeto.
+        No publiques información personal de otras personas.
+      </p>
+      <div class="card">
+        <textarea id="postText" maxlength="500"
+          placeholder="¿Qué valor consideras más importante?"></textarea>
+        <button id="postBtn" class="btn">Publicar reflexión</button>
+        <div id="posts"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    Moralab · Proyecto educativo de demostración
+    <p>No es una plataforma oficial del colegio.</p>
+  </footer>
+
+  <dialog id="authDialog">
+    <div class="modal">
+      <button id="closeDialog" class="close">✕</button>
+      <h2>Tu espacio Moralab</h2>
+      <p>Crea un perfil local para participar en la demostración.</p>
+
+      <label>
+        Nombre de usuario
+        <input id="username" maxlength="24"
+          placeholder="Tu nombre de usuario">
+      </label>
+
+      <label>
+        Correo electrónico
+        <input id="email" type="email"
+          placeholder="correo@ejemplo.com">
+      </label>
+
+      <label>
+        Imagen de perfil (opcional)
+        <input id="avatar" type="file"
+          accept="image/png,image/jpeg,image/webp">
+      </label>
+
+      <button id="saveProfile" class="btn">
+        Guardar perfil
+      </button>
+      <button id="logout" class="secondary">
+        Cerrar sesión local
+      </button>
+    </div>
+  </dialog>
+
+  <script src="app.js"></script>
+</body>
+</html>
